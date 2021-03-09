@@ -544,7 +544,6 @@ void SensorTable_ProcessShadowInitMsg(SensorShadowInitMsg_t *pMsg)
 		}
 		p->pLog = SensorLog_Allocate(CONFIG_SENSOR_LOG_MAX_SIZE);
 		for (i = 0; i < pMsg->eventCount; i++) {
-			FRAMEWORK_ASSERT(pMsg->events[i].epoch != 0);
 			SensorLog_Add(p->pLog, &pMsg->events[i]);
 		}
 	}
@@ -1050,8 +1049,8 @@ static void ShadowTemperatureHandler(JsonMsg_t *pMsg, SensorEntry_t *pEntry)
 		ShadowBuilder_AddSigned32(
 			pMsg,
 			MangleKey(pEntry->name, CONFIG_USE_SINGLE_AWS_TOPIC ?
-							"temperature" :
-							"tempCc"),
+							      "temperature" :
+							      "tempCc"),
 			temperature);
 		break;
 	default:
