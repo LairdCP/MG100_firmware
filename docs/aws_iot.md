@@ -4,13 +4,13 @@
 
 1. **[Introduction](#introduction)**
 2. **[Prerequisites](#prerequisites)**
-3. **[AWS IoT Core Setup](#aws-iot-core-setup)**
-   [Account Setup](#account-setup)
-   [Setup a Policy](#setup-a-policy)
+3. **[AWS IoT Core Setup](#aws-iot-core-setup)**  
+   [Account Setup](#account-setup)  
+   [Setup a Policy](#setup-a-policy)  
    [Create a Thing](#create-a-thing)
-4. **[Configure MG100 for AWS Connection](#configure-mg100-for-aws-connection)**
-   [Prerequisites](#prerequisites)
-   [Provisioning the MG100 Via UART](#provisioning-the-mg100-via-uart)
+4. **[Configure MG100 for AWS Connection](#configure-mg100-for-aws-connection)**  
+   [Prerequisites](#prerequisites)  
+   [Provisioning the MG100 Via UART](#provisioning-the-mg100-via-uart)  
    [Monitor AWS Messages](#monitor-aws-messages)
 5. **[AWS Topics](aws_topics.md)**
 
@@ -36,7 +36,7 @@ Login to the [AWS IoT console](https://console.aws.amazon.com/iot/)
 
 In the left-hand menu, navigate to Secure -> Policies.
 
-![Policies](images/aws/policies.png)
+![Policies](images/aws/policies.png)  
 _Policies_
 
 Click Create a policy.
@@ -50,7 +50,7 @@ Finally click Create.
 
 > **Note:** This policy is extremely permissive. It is recommend to setup policies only be as permissive as necessary. See [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html?icmpid=docs_iot_console)
 
-![Create Policy](images/aws/create_policy.png)
+![Create Policy](images/aws/create_policy.png)  
 _Create Policy_
 
 ### Create a Thing
@@ -61,24 +61,24 @@ Click Create a single thing.
 
 Enter a name and click Next.
 
-![Thing Name](images/aws/thing_name.png)
+![Thing Name](images/aws/thing_name.png)  
 _Thing Name_
 
 Create a certificate using the One-click certificate creation by clicking Create certificate.
 
-![Create Cert](images/aws/create_cert.png)
+![Create Cert](images/aws/create_cert.png)  
 _Create Cert_
 
 Download the device certificate, keys, and Amazon Root CA.
 
 Activate the certificate and then click attach policy.
 
-![Download Cert](images/aws/download_cert.png)
+![Download Cert](images/aws/download_cert.png)  
 _Download Cert_
 
 Select the policy that was created previously and click Register Thing.
 
-![Attach Policy](images/aws/attach_policy.png)
+![Attach Policy](images/aws/attach_policy.png)  
 _Attach Policy_
 
 ## Configure MG100 for AWS Connection
@@ -153,5 +153,5 @@ With the AWS IoT console, you can watch for MQTT data sent by the device. Got to
 
 In Subscription topic, enter `$aws/things/deviceId-<my_imei>/shadow/update` where `<my_imei>` is replaced by the imei of your device. Then click Subscribe to topic. JSON data will be displayed once the MG100 sends data.
 
-![MQTT Data](images/aws/mqtt_data.png)
+![MQTT Data](images/aws/mqtt_data.png)  
 _MQTT Data_
