@@ -1,3 +1,5 @@
+## **Note:** Not recommended for new designs. Use https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.
+
 [![Laird Connectivity](docs/images/LairdConnnectivityLogo_Horizontal_RGB.png)](https://www.lairdconnect.com/)
 
 # MG100
