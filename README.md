@@ -1,5 +1,7 @@
 ## **Note:** Not recommended for new designs. Use https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.
 
+## For Canvas firmware for the MG100, see https://github.com/CanvasDM/ble_gateway_dm_firmware_manifest. 
+
 [![Laird Connectivity](docs/images/LairdConnnectivityLogo_Horizontal_RGB.png)](https://www.lairdconnect.com/)
 
 # MG100
